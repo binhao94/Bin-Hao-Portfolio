@@ -1,0 +1,4 @@
+# Netlify redirects (leave here for future pretty URLs)
+/ /index.html 200
+/about /about.html 200
+/work /index.html 200
