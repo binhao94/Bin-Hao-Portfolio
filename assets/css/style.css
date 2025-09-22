@@ -1,4 +1,3 @@
-
 :root{
   --bg:#0a0a0a;
   --fg:#eaeaea;
@@ -82,4 +81,34 @@ img{max-width:100%;display:block}
 .notice{
   background:#0f172a;border:1px solid #1e293b;color:#e2e8f0;
   padding:14px 16px;border-radius:12px;font-size:14px
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    width: calc(100% - 2rem); /* 1rem gutters each side */
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  /* Always show captions on small screens (touch-friendly) */
+  .caption {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+
+  /* ensure captions remain visible on the smallest screens too */
+  .caption {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto;
+  }
 }
