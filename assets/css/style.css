@@ -40,9 +40,15 @@ img{max-width:100%;display:block}
 
 .gallery{
   display:grid;
-  grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
-  gap:var(--grid-gap);
-  padding:24px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:1rem;
+  width:auto;
+  max-width:none;
+  min-width:260px;
+  margin:2rem 15vw;
+  justify-items:center;
+  align-items:start;
+  padding:0;
 }
 .tile{
   position:relative;overflow:hidden;border-radius:var(--card-radius);
