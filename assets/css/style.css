@@ -89,6 +89,227 @@ img{max-width:100%;display:block}
   padding:14px 16px;border-radius:12px;font-size:14px
 }
 
+.ei-page{max-width:980px;padding-bottom:32px}
+.ei-title{margin-top:22px}
+
+.ei-video-frame{
+  margin-top:16px;
+  border:1px solid #242424;
+  border-radius:14px;
+  background:#060606;
+  padding:14px;
+}
+.ei-video-player{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:10px;
+  background:#000;
+}
+
+.ei-intro p{margin:0 0 14px 0}
+.ei-divider{
+  border:0;
+  border-top:1px solid #262626;
+  margin:28px 0 30px;
+}
+.ei-section-title{
+  margin:0 0 14px 0;
+  font-size:clamp(21px,2.5vw,30px);
+}
+
+.ei-overview{margin-bottom:34px}
+.ei-slideshow{
+  position:relative;
+  border:1px solid #242424;
+  border-radius:14px;
+  padding:14px;
+  background:#0d0d0d;
+}
+.ei-slide-image-wrap{
+  width:100%;
+  border:0;
+  margin:0;
+  padding:0;
+  border-radius:10px;
+  overflow:hidden;
+  background:#000;
+  cursor:zoom-in;
+}
+.ei-slide-image-wrap img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
+.ei-slide-caption{
+  margin:12px 0 0;
+  color:#c9c9c9;
+}
+.ei-slide-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  border:1px solid #383838;
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  background:rgba(8,8,8,.9);
+  color:#f5f5f5;
+  font-size:20px;
+  line-height:1;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+}
+.ei-slide-prev{left:24px}
+.ei-slide-next{right:24px}
+.ei-slide-arrow:hover{background:#171717}
+
+.ei-thumb-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(102px, 1fr));
+  gap:10px;
+  margin-top:12px;
+}
+.ei-thumb{
+  border:1px solid #2f2f2f;
+  border-radius:9px;
+  overflow:hidden;
+  background:#080808;
+  padding:0;
+  margin:0;
+  cursor:pointer;
+}
+.ei-thumb img{
+  width:100%;
+  height:68px;
+  object-fit:cover;
+}
+.ei-thumb.is-active{
+  border-color:#dadada;
+  box-shadow:0 0 0 1px #dadada;
+}
+
+.ei-single-image{
+  margin:0 0 28px;
+  border:1px solid #232323;
+  border-radius:14px;
+  padding:14px;
+  background:#0b0b0b;
+}
+.ei-single-image img{
+  width:100%;
+  border-radius:9px;
+  object-fit:cover;
+}
+
+.ei-breakdown{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  margin:0 0 34px;
+}
+.ei-breakdown-card{
+  border:1px solid #242424;
+  border-radius:12px;
+  background:#0b0b0b;
+  padding:16px;
+}
+.ei-breakdown-card h3{margin:0 0 8px}
+.ei-breakdown-card p{margin:0;color:#d8d8d8}
+
+.ei-notable{margin-bottom:34px}
+.ei-moment-row{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  align-items:center;
+  border:1px solid #232323;
+  border-radius:14px;
+  background:#0b0b0b;
+  padding:14px;
+  margin-bottom:12px;
+}
+.ei-moment-row h3{margin:0 0 6px}
+.ei-moment-row p{margin:0;color:#d3d3d3}
+.ei-moment-video{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:9px;
+  border:1px solid #2a2a2a;
+  object-fit:cover;
+  background:#000;
+}
+
+.ei-reference-list{margin-bottom:32px}
+.ei-reference-list p{margin-top:0}
+.ei-reference-list ul{
+  margin:0;
+  padding-left:22px;
+}
+
+.ei-lightbox[hidden]{display:none}
+.ei-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:999;
+  background:rgba(0,0,0,.95);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  padding:24px;
+}
+.ei-lightbox-image{
+  width:min(1100px, 92vw);
+  max-height:78vh;
+  object-fit:contain;
+  border-radius:12px;
+}
+.ei-lightbox-caption{
+  margin:0;
+  color:#dcdcdc;
+  text-align:center;
+  max-width:840px;
+}
+.ei-lightbox-close{
+  position:absolute;
+  top:20px;
+  right:20px;
+  border:1px solid #454545;
+  width:42px;
+  height:42px;
+  border-radius:999px;
+  background:#0f0f0f;
+  color:#f2f2f2;
+  font-size:20px;
+  cursor:pointer;
+}
+.ei-lightbox-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  border:1px solid #454545;
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  background:#0f0f0f;
+  color:#f2f2f2;
+  font-size:22px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+}
+.ei-lightbox-prev{left:20px}
+.ei-lightbox-next{right:20px}
+.ei-no-scroll{overflow:hidden}
+
+@media(min-width:760px){
+  .ei-breakdown{grid-template-columns:repeat(3, 1fr)}
+}
+@media(min-width:900px){
+  .ei-moment-row{grid-template-columns:1.1fr .9fr}
+}
 @media (max-width: 900px) {
   .gallery {
     width: calc(100% - 2rem); /* 1rem gutters each side */
@@ -102,6 +323,16 @@ img{max-width:100%;display:block}
     transform: none !important;
     pointer-events: auto;
   }
+
+  .ei-slide-prev{left:16px}
+  .ei-slide-next{right:16px}
+  .ei-lightbox-arrow{
+    top:auto;
+    bottom:22px;
+    transform:none;
+  }
+  .ei-lightbox-prev{left:20px}
+  .ei-lightbox-next{right:20px}
 }
 
 @media (max-width: 420px) {

@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Project One — Penumbra (Stealth Platformer) – Portfolio</title>
-<meta name="description" content="Game design portfolio of Bin Hao Er — selected works, experiments, and contact." />
+<title>Escape/Illusion - Portfolio</title>
+<meta name="description" content="Level design portfolio of Bin Hao Er — selected works, experiments, and contact." />
 <link rel="icon" href="/assets/img/ph1.svg">
-<meta property="og:title" content="Project One — Penumbra (Stealth Platformer) – Portfolio" />
+<meta property="og:title" content="Escape/Illusion - Portfolio" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/assets/img/ph2.svg" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
   <nav class="nav">
-    <div class="brand"><a href="/index.html">BIN HAO ER • GAME DESIGN</a></div>
+    <div class="brand"><a href="/index.html">BIN HAO ER • ASPIRING LEVEL DESIGNER</a></div>
     <div class="nav-links">
       <a href="/index.html">Work</a> ·
       <a href="/about.html">About</a> ·
@@ -21,27 +21,179 @@
     </div>
   </nav>
 
-<main class="prose">
-  <h1>Project One — Penumbra (Stealth Platformer)</h1>
-  <p>A 2D stealth platformer about adaptation via limited, randomized platform spawning and an augment system.</p>
-  <figure>
-    <img src="/assets/img/ph6.svg" alt="Project One — Penumbra (Stealth Platformer) hero" loading="lazy">
-    <figcaption>Hero image (replace with your own).</figcaption>
+<main class="prose ei-page">
+  <section class="ei-video-frame" aria-label="Project video">
+    <video class="ei-video-player" controls preload="metadata" poster="/assets/img/ph1.svg">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <h1 class="ei-title">Escape/Illusion</h1>
+
+  <section class="ei-intro" aria-label="Project breakdown and summary">
+    <p>
+      Escape/Illusion is a stealth-driven Source Engine level where the player alternates between
+      physical traversal and perception-based puzzle solving. The map uses sightline pressure,
+      directional lighting, and audio cues to force fast decision making under uncertainty.
+    </p>
+    <p>
+      The project focused on building a readable challenge curve with tight spatial loops. The main
+      breakdown: establish core stealth language, introduce systemic pressure through patrol timing,
+      then escalate with illusion-driven encounters that alter the player's interpretation of safe routes.
+    </p>
+    <p>
+      Summary: the level shipped as a complete playable slice with stable pacing, high replay value for
+      route optimization, and clear opportunities for future encounter variants.
+    </p>
+  </section>
+
+  <hr class="ei-divider">
+
+  <h2 class="ei-section-title">Overview</h2>
+  <section class="ei-overview" aria-label="Overview slideshow">
+    <div class="ei-slideshow" data-ei-slideshow>
+      <button class="ei-slide-arrow ei-slide-prev" type="button" data-ei-action="prev" aria-label="Previous image">
+        &#8592;
+      </button>
+      <button class="ei-slide-arrow ei-slide-next" type="button" data-ei-action="next" aria-label="Next image">
+        &#8594;
+      </button>
+      <button class="ei-slide-image-wrap" type="button" data-ei-action="open-lightbox" aria-label="Open lightbox">
+        <img
+          data-ei-main-image
+          src="/assets/img/ph1.svg"
+          alt="High-level route sketch of Escape/Illusion"
+          loading="lazy"
+        >
+      </button>
+      <p class="ei-slide-caption" data-ei-caption>High-level route sketch showing stealth and puzzle crossover.</p>
+    </div>
+    <div class="ei-thumb-row">
+      <button class="ei-thumb is-active" type="button" data-ei-thumb data-index="0" data-src="/assets/img/ph1.svg" data-alt="High-level route sketch of Escape/Illusion" data-caption="High-level route sketch showing stealth and puzzle crossover." aria-label="Show slide one">
+        <img src="/assets/img/ph1.svg" alt="" loading="lazy">
+      </button>
+      <button class="ei-thumb" type="button" data-ei-thumb data-index="1" data-src="/assets/img/ph2.svg" data-alt="Encounter heatmap with guard pressure" data-caption="Encounter heatmap used to tune pressure by lane and depth." aria-label="Show slide two">
+        <img src="/assets/img/ph2.svg" alt="" loading="lazy">
+      </button>
+      <button class="ei-thumb" type="button" data-ei-thumb data-index="2" data-src="/assets/img/ph3.svg" data-alt="Stealth lane blocking experiment" data-caption="Mid-production test where lane blockers shaped decision timing." aria-label="Show slide three">
+        <img src="/assets/img/ph3.svg" alt="" loading="lazy">
+      </button>
+      <button class="ei-thumb" type="button" data-ei-thumb data-index="3" data-src="/assets/img/ph4.svg" data-alt="Final encounter composition" data-caption="Final encounter composition balancing readability and surprise." aria-label="Show slide four">
+        <img src="/assets/img/ph4.svg" alt="" loading="lazy">
+      </button>
+      <button class="ei-thumb" type="button" data-ei-thumb data-index="4" data-src="/assets/img/ph5.svg" data-alt="Lighting pass before final polish" data-caption="Lighting pass before final polish, used to sell illusion beats." aria-label="Show slide five">
+        <img src="/assets/img/ph5.svg" alt="" loading="lazy">
+      </button>
+    </div>
+  </section>
+
+  <h2 class="ei-section-title">Top down map</h2>
+  <figure class="ei-single-image">
+    <img src="/assets/img/ph6.svg" alt="Escape/Illusion top down map" loading="lazy">
   </figure>
-  <h3>Role & Contributions</h3>
-  <ul>
-    <li>Design goals and constraints</li>
-    <li>What was prototyped and why</li>
-    <li>What I learned; results</li>
-  </ul>
-  <h3>Media</h3>
-  <p>Embed a trailer or GIF here (YouTube/Vimeo). Link to a playable build (itch.io) if available.</p>
-  <p><a class="button" href="/index.html">← Back to Work</a></p>
+
+  <h2 class="ei-section-title">Gameplay beats</h2>
+  <figure class="ei-single-image">
+    <img src="/assets/img/ph2.svg" alt="Gameplay beats sequence" loading="lazy">
+  </figure>
+
+  <section class="ei-breakdown" aria-label="Goals constraints and requirements">
+    <article class="ei-breakdown-card">
+      <h3>Goals</h3>
+      <p>Create stealth tension that remains readable while introducing illusion mechanics that challenge player assumptions without feeling unfair.</p>
+    </article>
+    <article class="ei-breakdown-card">
+      <h3>Constraints</h3>
+      <p>Built in Source with limited scripting bandwidth, fixed milestone deadlines, and a strict target on encounter count per development week.</p>
+    </article>
+    <article class="ei-breakdown-card">
+      <h3>Requirements</h3>
+      <p>Deliver a complete vertical slice with one major stealth loop, one illusion-driven puzzle branch, and clear onboarding for first-time players.</p>
+    </article>
+  </section>
+
+  <h2 class="ei-section-title">Notable Moments</h2>
+  <section class="ei-notable" aria-label="Notable moments">
+    <article class="ei-moment-row">
+      <video class="ei-moment-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/ph3.svg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      </video>
+      <div>
+        <h3>False corridor reveal</h3>
+        <p>A narrow passage initially reads as a safe flank path, then collapses into a hard exposure lane once the player commits.</p>
+      </div>
+    </article>
+    <article class="ei-moment-row">
+      <video class="ei-moment-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/ph4.svg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4">
+      </video>
+      <div>
+        <h3>Audio-led reroute</h3>
+        <p>Guard movement audio was tuned to pull players toward a riskier shortcut, enabling emergent route planning under pressure.</p>
+      </div>
+    </article>
+    <article class="ei-moment-row">
+      <video class="ei-moment-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/ph5.svg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      </video>
+      <div>
+        <h3>Light cone inversion</h3>
+        <p>A late lighting pass inverted expected danger zones so the player had to rethink previously learned stealth habits.</p>
+      </div>
+    </article>
+    <article class="ei-moment-row">
+      <video class="ei-moment-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/ph6.svg">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/bee.mp4" type="video/mp4">
+      </video>
+      <div>
+        <h3>Final extraction sprint</h3>
+        <p>The closing sequence compresses all prior systems into a timed sprint that rewards route mastery and quick adaptation.</p>
+      </div>
+    </article>
+  </section>
+
+  <h2 class="ei-section-title">References</h2>
+  <section class="ei-reference-list" aria-label="References">
+    <p>System references used during development:</p>
+    <ul>
+      <li>Stealth readability studies from immersive sim postmortems</li>
+      <li>Source Engine encounter scripting documentation and community examples</li>
+      <li>Internal playtest feedback logs from milestone playthroughs</li>
+      <li>Lighting and composition references from cinematic stealth spaces</li>
+    </ul>
+  </section>
+
+  <h2 class="ei-section-title">Reflections</h2>
+  <section aria-label="Reflections">
+    <p>
+      The strongest result was how quickly players understood the stealth language after the first checkpoint. The weakest area was pacing in
+      the middle third, where some players waited too long for patrol windows and momentum dropped.
+    </p>
+    <p>
+      In the next iteration I would refine timing telegraphs, add one optional high-risk shortcut, and provide more explicit early feedback on
+      how illusion states can be exploited rather than avoided.
+    </p>
+  </section>
+
+  <p><a class="button" href="/index.html">&#8592; Back to Work</a></p>
 </main>
+
+  <div class="ei-lightbox" data-ei-lightbox hidden>
+    <button class="ei-lightbox-close" type="button" data-ei-action="close-lightbox" aria-label="Close lightbox">
+      &#10005;
+    </button>
+    <button class="ei-lightbox-arrow ei-lightbox-prev" type="button" data-ei-action="prev" aria-label="Previous image">
+      &#8592;
+    </button>
+    <img class="ei-lightbox-image" data-ei-lightbox-image src="/assets/img/ph1.svg" alt="">
+    <button class="ei-lightbox-arrow ei-lightbox-next" type="button" data-ei-action="next" aria-label="Next image">
+      &#8594;
+    </button>
+    <p class="ei-lightbox-caption" data-ei-lightbox-caption>High-level route sketch showing stealth and puzzle crossover.</p>
+  </div>
 
   <footer class="footer container">
     © 2025 Bin Hao Er. Built with static HTML/CSS. Hosted on Netlify.
   </footer>
 <script src="/assets/js/main.js"></script>
 </body></html>
-
