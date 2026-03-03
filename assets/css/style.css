@@ -107,6 +107,23 @@ img{max-width:100%;display:block}
 }
 
 .ei-intro p{margin:0 0 14px 0}
+.ei-intro-grid{margin:0 0 6px}
+.ei-intro-card{
+  border:1px solid #242424;
+  border-radius:12px;
+  background:#0b0b0b;
+  padding:16px;
+}
+.ei-intro-heading{
+  margin:0 0 10px 0;
+  font-size:clamp(18px,2.1vw,24px);
+}
+.ei-intro-list{
+  margin:0;
+  padding-left:20px;
+}
+.ei-intro-list li{margin-bottom:6px}
+.ei-intro-card p{margin:0;color:#d6d6d6}
 .ei-divider{
   border:0;
   border-top:1px solid #262626;
