@@ -91,6 +91,12 @@ img{max-width:100%;display:block}
 
 .ei-page{max-width:980px;padding-bottom:32px}
 .ei-title{margin-top:22px}
+.ei-unified-title{
+  text-align:center;
+  color:#d8c79a;
+  font-size:clamp(24px,3vw,36px);
+  letter-spacing:.02em;
+}
 
 .ei-video-frame{
   margin-top:16px;
@@ -255,13 +261,6 @@ img{max-width:100%;display:block}
   border:1px solid #2a2a2a;
   object-fit:cover;
   background:#000;
-}
-
-.ei-reference-list{margin-bottom:32px}
-.ei-reference-list p{margin-top:0}
-.ei-reference-list ul{
-  margin:0;
-  padding-left:22px;
 }
 
 .ei-lightbox[hidden]{display:none}
