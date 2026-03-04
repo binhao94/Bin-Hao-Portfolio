@@ -93,8 +93,10 @@ img{max-width:100%;display:block}
 .ei-title{margin-top:22px}
 .ei-unified-title{
   text-align:center;
-  color:#d8c79a;
+  color:#8db8e8;
   font-size:clamp(24px,3vw,36px);
+  line-height:1.15;
+  font-weight:700;
   letter-spacing:.02em;
 }
 
@@ -138,6 +140,9 @@ img{max-width:100%;display:block}
 .ei-section-title{
   margin:0 0 14px 0;
   font-size:clamp(21px,2.5vw,30px);
+}
+.ei-section-title.ei-unified-title{
+  font-size:clamp(24px,3vw,36px);
 }
 
 .ei-overview{margin-bottom:34px}
